@@ -12,7 +12,7 @@ This is a basic application to help organize movies and actors information.
 	- Add or delete an actor from the database
 	- Modify actors or movies
 
--  **Executive Director**.
+-  **Executive Director**
 	- All the permissions of Casting Director and
 	- Add or delete movie from the database
 
