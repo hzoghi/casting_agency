@@ -22,3 +22,5 @@ This is a basic application to help organize movies and actors information.
 - POST/actors and /movies
 - PATCH /actors and /movies
 
+###
+created a local database called *casting*
