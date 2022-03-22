@@ -5,7 +5,7 @@ This is a basic application to help organize movies and actors information.
 
 ## Roles
  The roles relevant to the app are:
--  **Casting Assistnant**
+-  **Casting Assistant**
 	- Can view actors and movies
 -  **Casting Director**
 	- All the permissions of Casting Assistant and
@@ -23,4 +23,4 @@ This is a basic application to help organize movies and actors information.
 - PATCH /actors and /movies
 
 ###
-created a local database called *casting*
+started adding the Actor and movie models + association table
