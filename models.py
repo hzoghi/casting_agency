@@ -27,8 +27,22 @@ def db_drop_and_create_all():
     db.drop_all()
     db.create_all()
 
+
 # tables
 # -------------------------------------------------------- #
-# TODO::: implement movies data model
+association_table = db.Table('association',
+                             db.Column('movie_id', db.ForeignKey('movie.id')),
+                             db.Column('actor_id', db.ForeignKey('actor.id')))
 
-# TODO::: implement actors data model
+
+class Movie(db.Model):
+    __tablename__ = 'movie'
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String, unique=True)
+    actors = db.relationship('Actor')
+
+
+class Actor(db.Model):
+    __tablename__ = 'actor'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String, nullable=False)
