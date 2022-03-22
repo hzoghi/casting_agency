@@ -1,13 +1,34 @@
 # Data Models
 # Imports
-import os
 from flask_sqlalchemy import SQLAlchemy
 
 # -------------------------------------------------------- #
-database_filename = "database.db"
-project_folder = os.path.dirname(os.path.abspath(__file__))
-# TODO: database URI
-
-# TODO: setup_db
-
 db = SQLAlchemy()
+
+
+# utilities
+# -------------------------------------------------------- #
+def setup_db(app):
+    """
+    to setup database parameters
+    :param app: Flask object
+    :return: none
+    """
+    app.config.from_object('config')
+    db.app = app
+    db.init_app(app)
+
+
+def db_drop_and_create_all():
+    """
+    recreate the database
+    :return: None
+    """
+    db.drop_all()
+    db.create_all()
+
+# tables
+# -------------------------------------------------------- #
+# TODO::: implement movies data model
+
+# TODO::: implement actors data model
