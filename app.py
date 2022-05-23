@@ -14,10 +14,17 @@ CORS(app)
 setup_db(app)
 db_drop_and_create_all()
 
-#endpoints
+
+# endpoints
 # -------------------------------------------------------- #
+@app.route("/")
+def hello_world():
+    return "<p>Hello World!</p>"
+
 
 # TODO::: Implement GET/actors and /movies
 # TODO::: Implement DELETE/actors and /movies
 # TODO::: Implement POST/actors and /movies
 # TODO::: Implement PATCH /actors and /movies
+if __name__ == '__main__':
+    app.run()

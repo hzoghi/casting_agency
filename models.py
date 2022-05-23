@@ -30,9 +30,9 @@ def db_drop_and_create_all():
 
 # tables
 # -------------------------------------------------------- #
-association_table = db.Table('association',
-                             db.Column('movie_id', db.ForeignKey('movie.id')),
-                             db.Column('actor_id', db.ForeignKey('actor.id')))
+# association_table = db.Table('association',
+#                              db.Column('movie_id', db.ForeignKey('movie.id')),
+#                              db.Column('actor_id', db.ForeignKey('actor.id')))
 
 
 class Movie(db.Model):
